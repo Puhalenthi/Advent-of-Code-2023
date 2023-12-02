@@ -1,5 +1,5 @@
 import time;
-with open("first.txt", "r") as f:
+with open("input.txt", "r") as f:
     startTime = time.time()
     text = f.readlines()
     numbers = []
