@@ -4,7 +4,6 @@ with open("input.txt", "r") as f:
     done = False
     total = 0
     isAddable = False
-    processedString = ""
     for l in range(len(lines)):
         for i in range(len(lines[l])):
             try:
@@ -26,20 +25,15 @@ with open("input.txt", "r") as f:
                         isAddable = True
                     elif (l < len(lines)-1 and i < len(lines[l])-1 and not lines[l+1][i+1].isdigit() and not lines[l+1][i+1] == "."): # down right
                         isAddable = True
-                    processedString += "."
                     if (i == len(lines[l])-1):
                         total += int(currNum)
                         currNum = ""
                         isAddable = False
                 else:
-                    processedString += lines[l][i]
                     if (isAddable):
-                        print(currNum)
                         total += int(currNum)
                         isAddable = False
                     currNum = ""
             except:
                 pass
-        #lines[l] = processedString
-        processedString = ""
     print(total)
