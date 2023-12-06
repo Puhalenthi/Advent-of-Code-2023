@@ -1,3 +1,6 @@
+# Before running this code, you must alter your input.
+# Create a new line at the end of your input file and add a space to it
+
 def checkIfSeedInRange(seed, destStart, sourceStart, rangeLength):
     if (sourceStart <= seed and seed <= sourceStart + rangeLength): # If the seed is in the range
         return (seed - sourceStart) + destStart
@@ -37,6 +40,4 @@ with open("input.txt", "r") as f:
             mappingRanges = []         
         elif info[0].isdigit():
             mappingRanges.append((int(info[0]), int(info[1]), int(info[2])))
-    
-    print(seeds)
-    print(min(seeds))
+    print(min(min(seeds)))
