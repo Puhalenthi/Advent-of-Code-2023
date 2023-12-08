@@ -144,7 +144,7 @@ def compareHands(hand1, hand2): # Strongest one gets returned
         elif cardStrength.index(card1) > cardStrength.index(card2):
             return hand2
 
-with open("C:\BCA ATCS\Competitions\AdventOfCode\Advent-of-Code-2023\day7\input.txt", "r") as f:
+with open("input.txt", "r") as f:
     lines = f.readlines()
     cards = []
     for line in lines: # Calculates the ordering of the cards
