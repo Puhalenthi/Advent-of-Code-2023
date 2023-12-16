@@ -12,6 +12,7 @@ with open('C:\BCA ATCS\Competitions\AdventOfCode\Advent-of-Code-2023\day11\input
                 break
             if j == len(lines) - 1:
                 columnsWithoutGalaxies.append(i)
+                
     galaxies = []
     for i in range(len(lines)): # Get the positions of all galaxies
         for j in range(len(lines[i])):
